@@ -1,4 +1,4 @@
-# HotelBookingSystem
+![image](https://github.com/user-attachments/assets/b72d0bbc-81af-4eaa-9c93-942db9b1ffa4)# HotelBookingSystem
 
 # Installs
 
@@ -209,41 +209,43 @@ Steps
 7. Run command "docker run -d --name hotelmanagement-container -p 8083:8080 hotelmanagement:1.0".
 8. The container should now visible in your Docker app.
 
-9. Run these commands in Git Bash:
-```
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
-5. Create new repository on GitHub
-6. Initialize your local repository
-```
-cd path/to/your/project
-```
-- initialize git
-```
-git init
-```
+# Continuous Integration Setup
+1. Install Jenkins using below link
+-	https://www.jenkins.io/download/
+-	Before downloading, please take a moment to review the Hardware and Software Requirements section in below.
+-	https://www.jenkins.io/doc/book/installing/linux/#prerequisites
+-	Choose one version to download.
+2. Set up Jenkins
+-	On opening the Windows Installer, an Installation Setup Wizard appears, Click Next on the
+Setup Wizard to start your installation.
+-	Follow the instruction to continue with installation.
+-	Create "Jenkinsfile" and include the below code.
+  <img width="497" alt="image" src="https://github.com/user-attachments/assets/02e5a52b-9607-4a28-9e16-faa50964164d">
+  <img width="497" alt="image" src="https://github.com/user-attachments/assets/accad8f7-44b1-4255-846d-713a6d861731">
+3. Set up Ngrok
+-	Create account and install Ngrok in the below link.
+-	https://ngrok.com/
+-	open ngrok.exe after unzipping.
 
-7. Add and commit the files
-```
-git add .
-git commit -m "Initial commit"
-```
+4. Set up webhook
+<img width="670" alt="Screenshot 2024-09-05 at 2 55 51 PM" src="https://github.com/user-attachments/assets/39c6774b-3afd-4c50-9062-9c37f7661d88">
+-	In the "Payload URL" field, enter the Ngrok URL generated earlier, followed by the specific endpoint your application is listening to for webhook events. Then add /github-webhook.
+-	Click "Add webhook".
 
-8. Add remote Reposiory, go to your GitHub repository page, and find the URL under the "Code button" Copy the URL
-```
-git remote add origin https://github.com/username/repository.git
-```
-replace "https://github.com/username/repository.git" with your copies URL
+5. Set up Jenkins pipeline project
+-	Create a new Jenkins project through selecting “New Item” in Jenkins Dashboard.
+-	Enter the item name, and select pipeline project, then press ok.
+-	Scroll down to the Build Triggers section, you can set up a GitHub webhook so that Jenkins triggers a build automatically whenever there's a push to the repository.
+-	Scroll down to the pipeline section, in the definition part, select pipeline script from SCM. In the SCM part, select Git. In the "Repository URL" field, enter the URL of your Git repository.
+-	Under "Branches to build", you can specify which branch Jenkins should build. The default is */master, but you can change it to any branch name that exists in your repository.
+-	
 
-10. Push to GitHub
-   ```
-   git push -u origin master
-   ```
-   if you're using a different branch(main), replace 'master' with 'main'
+6. Push to Github
+-	run command 'git add .'
+-	run command 'git commit -m “Trigger Jenkins pipeline”'
 
-
-
+# CI and Version Control System Integration
+1. 
 
 
  
