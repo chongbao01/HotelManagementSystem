@@ -245,7 +245,9 @@ Setup Wizard to start your installation.
 -	run command 'git commit -m “Trigger Jenkins pipeline”'
 
 # CI and Version Control System Integration
-1. 
+1. Example to show the two system integration
+-	run command 'git fetch origin'
+-	run command 'git pull origin master --allow-unrelated-histories'
 
 
  
