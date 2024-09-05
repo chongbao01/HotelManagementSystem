@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/b72d0bbc-81af-4eaa-9c93-942db9b1ffa4)# HotelBookingSystem
+## HotelBookingSystem
 
 # Installs
 
