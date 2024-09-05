@@ -25,7 +25,7 @@ Please refer to **Set Up The Enviroment**for for the following process.
 4. Next, click on **import**.
 5. Click **Next** and choose **Browse**. (This will lead you into your directory and select the folder you downloaded just now.)
 6. Click **Finish**.
-7. You can see the project file on the right-hand side in Eclipse.
+7. You can see the project file on the right-hand side of Eclipse.
 
 **Reminder**
 1. If your library dependency is below JAVA-SE18, you have to change to Java System Libary (JAVA SE-20).
@@ -56,7 +56,7 @@ Junit is a widely used testing framework for Java programming. It helps develope
 
 7.	Select **All** the jar file on your desktop file, then click **open**.
 
-8.	After that, we can see the jar that we selected was shown in the library. Then click **Apply and Close** at the right bottom.
+8.	After that, we can see the jar that we selected was shown in the library. Then click **Apply and Close** at the bottom right.
 
 9.	You also may check the library and jar file that are added on the left-hand side.
 
@@ -110,12 +110,12 @@ Steps:
 -	Use cd to navigate the 'HotelManagementSystem' directory
 -	cd path\to\HotelManagementSystem
   
-2.	Run Gradle command
+2.	Run the Gradle command
 -	gradle init
--	（a)Select Basic as type of build and
+-	（a)Select Basic as the type of build and
 -	 (b)Enter your project name
 -	 (c)Select Groovy
--	 (d)Choose if you want to generate build using new APIs and behavior
+-	 (d)Choose if you want to generate a build using new APIs and behavior
   
 3.	Compile code
 -	Paste the below code into build.gradle.
@@ -191,16 +191,16 @@ jacocoTestReport {
     }
 }
 ```
--	Then run 'gradle test' in command prompt.
+-	Then run 'gradle test' in the command prompt.
 
 # Deployment Automation
 How to deploy the JAVA program on Docker
 
 Steps
-1. Downlaod Docker from official website
+1. Download Docker from the official website
    https://docs.docker.com/desktop/
    <img width="638" alt="Screenshot 2024-09-05 at 10 43 53 AM" src="https://github.com/user-attachments/assets/9ba04a03-60b4-4a5e-9d58-b37609971fc7">
-3. Create file called 'Dockerfile' in your repository.
+3. Create a file called 'Dockerfile' in your repository.
 4. Type in according to the below code into the Dockerfile.
 
 <img width="385" alt="image" src="https://github.com/user-attachments/assets/76b4f0dc-278d-457f-8441-efff4f6806d6">
@@ -210,7 +210,7 @@ Steps
 8. The container should now visible in your Docker app.
 
 # Continuous Integration Setup
-1. Install Jenkins using below link
+1. Install Jenkins using the below link
 -	https://www.jenkins.io/download/
 -	Before downloading, please take a moment to review the Hardware and Software Requirements section in below.
 -	https://www.jenkins.io/doc/book/installing/linux/#prerequisites
@@ -218,12 +218,12 @@ Steps
 2. Set up Jenkins
 -	On opening the Windows Installer, an Installation Setup Wizard appears, Click Next on the
 Setup Wizard to start your installation.
--	Follow the instruction to continue with installation.
+-	Follow the instructions to continue with the installation.
 -	Create "Jenkinsfile" and include the below code.
   <img width="497" alt="image" src="https://github.com/user-attachments/assets/02e5a52b-9607-4a28-9e16-faa50964164d">
   <img width="497" alt="image" src="https://github.com/user-attachments/assets/accad8f7-44b1-4255-846d-713a6d861731">
 3. Set up Ngrok
--	Create account and install Ngrok in the below link.
+-	Create an account and install Ngrok in the below link.
 -	https://ngrok.com/
 -	open ngrok.exe after unzipping.
 
@@ -232,15 +232,15 @@ Setup Wizard to start your installation.
 -	In the "Payload URL" field, enter the Ngrok URL generated earlier, followed by the specific endpoint your application is listening to for webhook events. Then add /github-webhook.
 -	Click "Add webhook".
 
-5. Set up Jenkins pipeline project
--	Create a new Jenkins project through selecting “New Item” in Jenkins Dashboard.
+5. Set up the Jenkins pipeline project
+-	Create a new Jenkins project by selecting “New Item” in the Jenkins Dashboard.
 -	Enter the item name, and select pipeline project, then press ok.
 -	Scroll down to the Build Triggers section, you can set up a GitHub webhook so that Jenkins triggers a build automatically whenever there's a push to the repository.
 -	Scroll down to the pipeline section, in the definition part, select pipeline script from SCM. In the SCM part, select Git. In the "Repository URL" field, enter the URL of your Git repository.
 -	Under "Branches to build", you can specify which branch Jenkins should build. The default is */master, but you can change it to any branch name that exists in your repository.
 -	
 
-6. Push to Github
+6. Push to GitHub
 -	run command 'git add .'
 -	run command 'git commit -m “Trigger Jenkins pipeline”'
 
