@@ -13,5 +13,14 @@ WORKDIR /hotelmanagementapp
 # Compile the Java source files (optional if not already compiled)
 RUN javac my/edu/utar/*.java
 
+#Bulid the application using Gradle
+RUN ./gradlew clean build
+
+#Expose the port that the app runs on
+EXPOSE 8080
+
+#Define environment variables
+ENV JAVA_OPTD=" "
+
 # Run the main class of the application
 CMD ["java", "my.edu.utar.App"]
